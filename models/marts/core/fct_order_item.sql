@@ -1,12 +1,17 @@
 with orders as(
+
     select * from {{ ref('stg_tpch_orders') }}
+
 ),
 
 line_item as (
+
     select * from {{ ref('stg_tpch_line_items') }}
+
 )
 
 select
+
     line_item.order_item_key,
     orders.order_key,
     orders.customer_key,
@@ -24,6 +29,7 @@ select
     line_item.ship_mode,
     line_item.extended_price,
     line_item.quantity
+
 from orders
 inner join line_item
     on orders.order_key = line_item.order_key
