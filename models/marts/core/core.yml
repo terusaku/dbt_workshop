@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fct_order_items
+    description: "fct model for order items"
+    columns:
+      - name: order_item_key
+        description: "Primary key for this table"
+        tests:
+          - unique
+          - not_null
