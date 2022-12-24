@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: fct_order_items
+  - name: fct_order_item
     description: "fct model for order items"
     columns:
       - name: order_item_key
